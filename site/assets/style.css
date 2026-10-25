@@ -617,6 +617,84 @@ h3 {
   outline-color: var(--mark);
 }
 
+.access {
+  scroll-margin-top: 1rem;
+}
+
+/* Early access form */
+
+.contact {
+  margin-top: 2.25rem;
+  max-width: 40rem;
+}
+.contact-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 1.25rem;
+}
+.access .contact-field {
+  margin: 0 0 1.25rem;
+  max-width: none;
+}
+.contact label {
+  display: block;
+  font-weight: 560;
+  font-size: 0.9375rem;
+  color: var(--white);
+  margin-bottom: 0.4rem;
+}
+.contact .opt {
+  font-weight: 400;
+  color: var(--on-ink);
+}
+.contact input,
+.contact textarea {
+  display: block;
+  width: 100%;
+  font: inherit;
+  font-size: 1rem;
+  color: var(--ink);
+  background: var(--field);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 0.75rem 0.85rem;
+}
+.contact textarea {
+  resize: vertical;
+  min-height: 8rem;
+}
+.contact input::placeholder {
+  color: var(--slate);
+}
+.contact input:focus-visible,
+.contact textarea:focus-visible {
+  outline-offset: 1px;
+}
+.contact-send {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.5rem;
+  margin-top: 0.5rem;
+}
+.access .contact-send .btn {
+  margin-top: 0;
+  border: 0;
+  cursor: pointer;
+  font-family: inherit;
+}
+.access .contact-note {
+  margin: 0;
+  font-size: 0.875rem;
+}
+.hp {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 /* Footer */
 
 .site-foot {
@@ -682,6 +760,9 @@ h3 {
   .demo-form,
   .answer {
     padding-inline: 1rem;
+  }
+  .contact-row {
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
