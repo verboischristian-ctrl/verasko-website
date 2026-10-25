@@ -1,0 +1,35 @@
+[build]
+  publish = "site"
+
+# verasko.ai and the www addresses all lead to verasko.com
+[[redirects]]
+  from = "https://verasko.ai/*"
+  to = "https://verasko.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.verasko.ai/*"
+  to = "https://verasko.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.verasko.com/*"
+  to = "https://verasko.com/:splat"
+  status = 301
+  force = true
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"
+
+[[headers]]
+  for = "/assets/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

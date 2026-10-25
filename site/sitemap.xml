@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://verasko.com/</loc>
+    <lastmod>2026-10-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verasko.com/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://verasko.com/fr/"/>
+  </url>
+  <url>
+    <loc>https://verasko.com/fr/</loc>
+    <lastmod>2026-10-25</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://verasko.com/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://verasko.com/fr/"/>
+  </url>
+  <url>
+    <loc>https://verasko.com/privacy/</loc>
+    <lastmod>2026-10-25</lastmod>
+  </url>
+  <url>
+    <loc>https://verasko.com/fr/confidentialite/</loc>
+    <lastmod>2026-10-25</lastmod>
+  </url>
+</urlset>
