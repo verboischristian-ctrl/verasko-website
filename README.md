@@ -1,6 +1,6 @@
 # Verasko – site web
 
-Dépôt privé de C.Verbois Consulting Comm. V. Confidentiel.
+Dépôt public de C.Verbois Consulting Comm. V. Tout ce qui est ici est visible par tous : ne jamais y mettre de clé, de mot de passe, de prix non décidé ni de donnée de client.
 
 Le site publié sur https://verasko.com vient de ce dépôt. Netlify publie automatiquement le dossier `site/` à chaque changement sur la branche `main`.
 
