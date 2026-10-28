@@ -1,5 +1,7 @@
 [build]
   publish = "site"
+  # Skip the build (and its Netlify credits) when only docs or the README changed
+  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- site/ netlify.toml"
 
 # verasko.ai and the www addresses all lead to verasko.com
 [[redirects]]

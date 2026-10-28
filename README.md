@@ -14,9 +14,13 @@ Le site publié sur https://verasko.com vient de ce dépôt. Netlify publie auto
 
 Ne pas pousser directement sur `main` pour de petites corrections : chaque mise en ligne coûte des crédits Netlify (environ 20 mises en ligne par mois avec le plan gratuit). Les versions de test sont gratuites.
 
+## Travail en cours
+
+- [Brief de la première version du site](docs/brief-premiere-version.md) : bloc d'aide, prix de lancement, programme pilote et contrôle gratuit du site.
+
 ## Règles
 
 - Aucune donnée réelle de client, aucun nom de client.
-- Aucun prix sur le site.
+- Prix : uniquement ceux du brief, décidés par C.Verbois Consulting. Aucun autre prix, aucune autre remise, aucun chiffre de résultat.
 - Pas de lien vers des services externes (polices, scripts, statistiques) : tout est servi depuis le site lui-même. Les règles de sécurité sont dans `netlify.toml`.
 - Le site existe en anglais (`site/`) et en français (`site/fr/`). Un changement dans une langue doit être fait aussi dans l'autre.
