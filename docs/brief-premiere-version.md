@@ -1,10 +1,16 @@
 # Brief : contenu de la première version du site
 
-Version du 28/10/2026. Pour FallInTech, dans le cadre de l'option site web (forfait de 400 € HT, livraison vers le 20/11/2026, après la phase 1).
+Version du 08/11/2026 (remplace celle du 28/10/2026). Pour FallInTech, dans le cadre de l'option site web.
 
 Ce document dit **quoi** mettre sur le site. La mise en page et le style restent libres, dans l'esprit du site actuel. Chaque changement se fait en anglais (`site/`) et en français (`site/fr/`). Les textes ci-dessous sont donnés dans les deux langues : les reprendre tels quels, ou dire avant de les changer.
 
 La description complète du produit est dans le dépôt verasko-engine : `docs/01-description-fonctionnelle.md`, version 0.2, surtout la section 5.8.
+
+**Ce qui change par rapport au 28/10 :**
+
+1. Prix : la formule Essential va jusqu'à 500 messages par mois (au lieu de 300). On compte les messages du formulaire de contact ; les recherches du bloc d'aide sont comprises. Les prix annuels sont affichés (section 4).
+2. Le contrôle gratuit du site est retiré pour l'instant : plus d'encadré, plus de champ `request`, plus de phrase dans la notice de confidentialité. Il reviendra quand le rapport sera prêt.
+3. Formulaire : cinq questions courtes en plus, pour savoir quelle formule convient et si le script peut s'installer (section 2.5).
 
 ---
 
@@ -12,7 +18,7 @@ La description complète du produit est dans le dépôt verasko-engine : `docs/0
 
 - **Plus de page de FAQ hébergée par Verasko.** L'entreprise cliente garde son site et sa marque. Verasko affiche à la place un **bloc d'aide** sur ses propres pages : recherche, questions fréquentes et thèmes.
 - **Installation :** une seule ligne de code dans le pied de page du site du client, une fois. Elle sert au formulaire de contact et au bloc d'aide, sur toutes les pages.
-- **Prix de lancement** publiés sur le site, avec un **programme pilote** et un **contrôle gratuit du site**.
+- **Prix de lancement** publiés sur le site, avec un **programme pilote**.
 
 ---
 
@@ -61,27 +67,27 @@ Troisième point, « One line of code » / « Une ligne de code » : remplacer l
 | | Anglais | Français |
 |---|---|---|
 | Titre | Join the pilot program | Rejoindre le programme pilote |
-| Texte | We are opening Verasko to 10 companies first. Tell us about your website, or ask for a free website check. | Nous ouvrons d'abord Verasko à 10 entreprises. Parlez-nous de votre site, ou demandez un contrôle gratuit de votre site. |
+| Texte | We are opening Verasko to 10 companies first. Tell us about your website. | Nous ouvrons d'abord Verasko à 10 entreprises. Parlez-nous de votre site. |
 
-**Nouveau champ obligatoire, en premier dans le formulaire :** un choix à deux options (boutons radio), nom du champ `request`.
+**Site web de l'entreprise :** le champ devient obligatoire. Retirer « (optional) » / « (facultatif) ».
 
-| Valeur | Anglais | Français |
-|---|---|---|
-| `pilot` | Join the pilot program | Rejoindre le programme pilote |
-| `website-check` | Get a free website check | Recevoir un contrôle gratuit de mon site |
+**Nouveaux champs**, après le site web et avant le message. Un seul choix par question (boutons radio ou liste), aucune option choisie par défaut.
 
-Libellé de la question : « What would you like? » / « Que souhaitez-vous ? ». Aucune option cochée par défaut.
+| Nom du champ | Obligatoire | Question (EN / FR) | Valeurs et libellés (EN / FR) |
+|---|---|---|---|
+| `volume` | oui | Contact messages per month / Messages de contact par mois | `under-100` Less than 100 / Moins de 100 ; `100-500` 100 to 500 / 100 à 500 ; `500-1500` 500 to 1,500 / 500 à 1 500 ; `over-1500` More than 1,500 / Plus de 1 500 |
+| `platform` | oui | Your website is built with / Votre site est fait avec | `wordpress` WordPress ; `shopify` Shopify ; `wix` Wix ; `squarespace` Squarespace ; `other` Other / Autre |
+| `inbox` | non | Where do your form messages arrive today? / Où arrivent aujourd'hui les messages de votre formulaire ? | `mailbox` A shared mailbox / Une boîte e-mail partagée ; `helpdesk` A helpdesk tool / Un outil de helpdesk ; `other` Other / Autre |
+| `documents` | non | Do you have official documents, such as terms of sale, a price list or policies? / Avez-vous des documents officiels, comme des conditions de vente, une liste de prix ou des politiques ? | `yes` Yes / Oui ; `no` No / Non |
+| `languages` | non | Languages of your website / Langues de votre site | `en` English / Anglais ; `fr` French / Français ; `both` Both / Les deux |
 
-**Site web de l'entreprise :** le champ devient obligatoire (on en a besoin dans les deux cas). Retirer « (optional) » / « (facultatif) ».
+**Message :** il devient facultatif. Nouveau libellé : « Anything else you want to tell us (optional) » / « Autre chose à nous dire (facultatif) ».
 
 **À ne pas changer :** les noms des formulaires `early-access` et `early-access-fr`. Les notifications par e-mail vers hello@verasko.com en dépendent.
 
 ### 2.6 Notice de confidentialité (`site/privacy/` et `site/fr/confidentialite/`)
 
-Le texte dit aujourd'hui que le formulaire sert à demander un accès anticipé. Le mettre à jour :
-
-- Le formulaire sert à rejoindre le programme pilote ou à demander un contrôle gratuit du site.
-- Ajouter : « If you ask for a free website check, we read the public pages of your website and the documents you send us, only to prepare your report. » / « Si vous demandez un contrôle gratuit de votre site, nous lisons les pages publiques de votre site et les documents que vous nous envoyez, uniquement pour préparer votre rapport. »
+Le texte dit aujourd'hui que le formulaire sert à demander un accès anticipé. Le mettre à jour : le formulaire sert à rejoindre le programme pilote. Les réponses aux questions du formulaire servent seulement à préparer le pilote.
 
 ---
 
@@ -122,8 +128,9 @@ Le texte dit aujourd'hui que le formulaire sert à demander un accès anticipé.
 
 | | Essential | Pro | Custom |
 |---|---|---|---|
-| Price | €59 / month | €149 / month | On quote |
-| Volume | Up to 300 questions a month | Up to 1,500 questions a month | More than 1,500 questions a month |
+| Monthly | €59 / month | €149 / month | On quote |
+| Yearly (2 months free) | €590 / year | €1,490 / year | On quote |
+| Volume | Up to 500 contact messages a month | Up to 1,500 contact messages a month | More than 1,500 contact messages a month |
 
 - Included in every plan :
   - answers with their source, in your contact form;
@@ -132,16 +139,13 @@ Le texte dit aujourd'hui que le formulaire sert à demander un accès anticipé.
   - a help block on your own website;
   - English and French.
 - Notes, en petit sous le tableau :
-  - A question is a message typed in your contact form or a search in your help block. It is roughly the number of messages your form receives today.
+  - We count the messages typed in your contact form, whether Verasko answers them or not. It is roughly the number of messages your form receives today.
+  - Searches in your help block are included, within fair use.
   - Above your monthly volume, Verasko stops answering and your form works as before. No surprise bill.
-  - Pay yearly and get 2 months free.
-  - Prices per month, excluding VAT. For businesses only.
+  - Prices excluding VAT. For businesses only.
 
 **Encadré « Pilot program »** : The first 10 companies use Verasko for free until launch. After launch, they get 50% off for 12 months. In return, we ask for your feedback and the right to name you as a client.
 Bouton : Join the pilot program (lien `#access`).
-
-**Encadré « Free website check »** : Send us your website address. We will ask for your official documents, such as your terms of sale and price list, compare them with your website, and send you the pages that say something different. No commitment.
-Bouton : Get a free website check (lien `#access`).
 
 **Français**
 
@@ -150,8 +154,9 @@ Bouton : Get a free website check (lien `#access`).
 
 | | Essentiel | Pro | Sur mesure |
 |---|---|---|---|
-| Prix | 59 € / mois | 149 € / mois | Sur devis |
-| Volume | Jusqu'à 300 questions par mois | Jusqu'à 1 500 questions par mois | Plus de 1 500 questions par mois |
+| Mensuel | 59 € / mois | 149 € / mois | Sur devis |
+| Annuel (2 mois offerts) | 590 € / an | 1 490 € / an | Sur devis |
+| Volume | Jusqu'à 500 messages de contact par mois | Jusqu'à 1 500 messages de contact par mois | Plus de 1 500 messages de contact par mois |
 
 - Inclus dans chaque formule :
   - des réponses avec leur source, dans votre formulaire de contact ;
@@ -160,24 +165,22 @@ Bouton : Get a free website check (lien `#access`).
   - un bloc d'aide sur votre propre site ;
   - anglais et français.
 - Notes, en petit sous le tableau :
-  - Une question, c'est un message écrit dans votre formulaire de contact ou une recherche dans votre bloc d'aide. C'est à peu près le nombre de messages que votre formulaire reçoit aujourd'hui.
+  - Nous comptons les messages écrits dans votre formulaire de contact, que Verasko y réponde ou non. C'est à peu près le nombre de messages que votre formulaire reçoit aujourd'hui.
+  - Les recherches dans votre bloc d'aide sont comprises, dans une limite d'usage raisonnable.
   - Au-delà de votre volume mensuel, Verasko arrête de répondre et votre formulaire fonctionne comme avant. Pas de facture surprise.
-  - En paiement annuel, 2 mois offerts.
-  - Prix par mois, hors TVA. Réservé aux entreprises.
+  - Prix hors TVA. Réservé aux entreprises.
 
 **Encadré « Programme pilote »** : Les 10 premières entreprises utilisent Verasko gratuitement jusqu'au lancement. Après le lancement, elles ont 50 % de réduction pendant 12 mois. En échange, nous vous demandons vos retours et le droit de vous citer comme client.
 Bouton : Rejoindre le programme pilote (lien `#access`).
 
-**Encadré « Contrôle gratuit de votre site »** : Envoyez-nous l'adresse de votre site. Nous vous demanderons vos documents officiels, comme vos conditions de vente et votre liste de prix, nous les comparerons avec votre site, et nous vous enverrons les pages qui disent autre chose. Sans engagement.
-Bouton : Recevoir un contrôle gratuit (lien `#access`).
-
-Idéal : quand on clique sur un de ces deux boutons, l'option correspondante est déjà choisie dans le formulaire (par exemple avec un lien `?request=pilot#access` et un petit script dans `site/assets/`). Si c'est compliqué, un simple lien vers `#access` suffit.
+Les prix restent en euros, aussi sur la version anglaise.
 
 ---
 
 ## 5. À ne pas mettre sur le site
 
 - Aucun autre prix, aucune autre remise que ceux de ce document.
+- Pas de contrôle gratuit du site pour l'instant.
 - Aucun chiffre de résultat (par exemple « 30 % de messages en moins ») : nous n'avons pas encore de mesures.
 - Aucune date de lancement.
 - Aucun nom de client ni de concurrent.
@@ -190,6 +193,6 @@ Idéal : quand on clique sur un de ces deux boutons, l'option correspondante est
 1. Les deux langues ont le même contenu, et les liens de langue mènent à la bonne section.
 2. Les liens « Pricing » / « Tarifs » de l'en-tête et du pied de page mènent à la section des prix.
 3. Les prix et les conditions sont exactement ceux de la section 4.
-4. Un envoi de test du formulaire, dans chaque langue, arrive dans hello@verasko.com avec le champ `request`. Utiliser une adresse comme test@example.com.
+4. Un envoi de test du formulaire, dans chaque langue, arrive dans hello@verasko.com avec les nouveaux champs. Utiliser une adresse comme test@example.com.
 5. Le site s'affiche bien sur téléphone (largeur 375 px), sans défilement horizontal.
 6. Le travail passe par une branche et une pull request, avec la version de test Netlify, comme indiqué dans le `README.md`.
