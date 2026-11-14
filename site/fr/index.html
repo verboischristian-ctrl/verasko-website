@@ -15,11 +15,20 @@
   <meta property="og:description" content="Des réponses tirées uniquement de vos documents officiels, affichées avant l'envoi du formulaire de contact.">
   <meta property="og:url" content="https://verasko.com/fr/">
   <meta property="og:locale" content="fr_FR">
+  <meta property="og:locale:alternate" content="en_GB">
+  <meta property="og:image" content="https://verasko.com/assets/og-fr.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Verasko : la question d'un visiteur reçoit une réponse tirée des conditions de vente, avec la source.">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#172236">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preload" href="/assets/fonts/public-sans.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/style.css">
   <script src="/assets/demo.js" defer></script>
+  <script src="/assets/form.js" defer></script>
 </head>
 <body>
   <a class="skip" href="#main">Aller au contenu</a>
@@ -36,7 +45,6 @@
         <p class="lede">Verasko se place devant votre formulaire de contact. Il répond uniquement à partir de vos documents officiels et montre d'où vient chaque réponse. S'il n'est pas sûr, votre formulaire part comme d'habitude.</p>
         <div class="actions">
           <a class="btn" href="#access">Demander un accès anticipé</a>
-          <a class="text-link" href="#sources">Voir comment il décide</a>
         </div>
       </div>
 
@@ -183,7 +191,7 @@
         <form class="contact" name="early-access-fr" method="POST" action="/fr/merci/" data-netlify="true" netlify-honeypot="bot-field">
           <input type="hidden" name="form-name" value="early-access-fr">
           <input type="hidden" name="language" value="fr">
-          <p class="hp"><label>Laissez ce champ vide <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+          <p class="hp" aria-hidden="true"><label>Laissez ce champ vide <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
           <div class="contact-row">
             <p class="contact-field">
               <label for="cf-name">Votre nom</label>
@@ -215,6 +223,7 @@
     <div class="wrap">
       <span>© 2026 Verasko</span>
       <a href="/fr/confidentialite/">Confidentialité</a>
+      <a href="/fr/conditions/">Conditions</a>
       <a href="/" hreflang="en" lang="en">English</a>
       <span class="made">Conçu, rédigé et publié par une IA.</span>
     </div>

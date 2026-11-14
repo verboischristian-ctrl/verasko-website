@@ -687,6 +687,25 @@ h3 {
   margin: 0;
   font-size: 0.875rem;
 }
+.contact [aria-invalid="true"] {
+  border-color: var(--mark);
+  box-shadow: 0 0 0 2px var(--mark);
+}
+.field-error {
+  display: block;
+  margin-top: 0.45rem;
+  font-size: 0.9375rem;
+  font-weight: 560;
+  color: var(--mark);
+}
+.field-error::before {
+  content: "! ";
+  font-weight: 760;
+}
+.access .contact-send .btn:disabled {
+  opacity: 0.75;
+  cursor: progress;
+}
 .hp {
   position: absolute;
   left: -10000px;
@@ -731,6 +750,15 @@ h3 {
 }
 .prose p {
   margin: 0.75rem 0 0;
+}
+.eyebrow {
+  margin: 0 0 0.75rem;
+  font-size: 0.9375rem;
+  font-weight: 620;
+  color: var(--slate);
+}
+.prose .btn {
+  margin-top: 0.5rem;
 }
 .prose .updated {
   color: var(--slate);

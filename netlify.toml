@@ -22,9 +22,17 @@
   status = 301
   force = true
 
+# Pages missing under /fr/ get the French 404 page. Existing files are served first.
+[[redirects]]
+  from = "/fr/*"
+  to = "/fr/404.html"
+  status = 404
+
 [[headers]]
   for = "/*"
   [headers.values]
+    # Netlify already sends every http:// visit to https://. This tells browsers to never try http:// again.
+    Strict-Transport-Security = "max-age=31536000"
     X-Content-Type-Options = "nosniff"
     X-Frame-Options = "DENY"
     Referrer-Policy = "strict-origin-when-cross-origin"
@@ -35,3 +43,8 @@
   for = "/assets/fonts/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
