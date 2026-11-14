@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Verasko: answers from your official documents</title>
-  <meta name="description" content="Verasko sits in front of your contact form and answers questions using only your official documents. When it is not sure, your form goes through as usual.">
+  <meta name="description" content="Verasko sits in front of your contact form and answers questions using only your official documents. When it is not sure, your form goes through as usual. You only pay for the messages it saves you.">
   <link rel="canonical" href="https://verasko.com/">
   <link rel="alternate" hreflang="en" href="https://verasko.com/">
   <link rel="alternate" hreflang="fr" href="https://verasko.com/fr/">
@@ -29,13 +29,40 @@
   <link rel="stylesheet" href="/assets/style.css">
   <script src="/assets/demo.js" defer></script>
   <script src="/assets/form.js" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Verasko",
+    "url": "https://verasko.com/",
+    "logo": "https://verasko.com/apple-touch-icon.png",
+    "email": "hello@verasko.com",
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "C.Verbois Consulting Comm. V.",
+      "vatID": "BE0808727897",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Meersstraat 194",
+        "postalCode": "1770",
+        "addressLocality": "Liedekerke",
+        "addressCountry": "BE"
+      }
+    }
+  }
+  </script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
   <header class="wrap site-head">
     <a class="wordmark" href="/" aria-label="Verasko, home">ver<span class="ask">ask</span>o</a>
-    <a class="lang" href="/fr/" hreflang="fr" lang="fr">Français</a>
+    <nav class="site-nav" aria-label="Main">
+      <a class="nav-how" href="#sources">How it works</a>
+      <a href="#pricing">Pricing</a>
+      <a class="lang" href="/fr/" hreflang="fr" lang="fr">Français</a>
+      <a class="btn btn--small nav-cta" href="#access">Join the pilot program</a>
+    </nav>
   </header>
 
   <main id="main">
@@ -44,8 +71,9 @@
         <h1 id="hero-title">True answers to what your customers ask.</h1>
         <p class="lede">Verasko sits in front of your contact form. It answers questions using only your official documents, and shows where each answer comes from. When it is not sure, your form goes through as usual.</p>
         <div class="actions">
-          <a class="btn" href="#access">Ask for early access</a>
+          <a class="btn" href="#access">Join the pilot program</a>
         </div>
+        <p class="hero-note">Free until launch for the first 10 companies. Then you only pay for the messages Verasko saves you.</p>
       </div>
 
       <figure class="demo" data-demo aria-labelledby="demo-caption">
@@ -142,7 +170,7 @@
             <li>the questions Verasko answered, and how visitors reacted;</li>
             <li>the questions your documents do not answer yet;</li>
             <li>pages on your website that contradict your official documents;</li>
-            <li>new FAQ entries, built from answers that worked.</li>
+            <li>new answers added to the help block on your website.</li>
           </ul>
         </div>
         <figure class="report">
@@ -163,7 +191,39 @@
       </div>
     </section>
 
-    <section class="section section--white" aria-labelledby="needs-title">
+    <section class="section section--white" id="help-block" aria-labelledby="help-title">
+      <div class="wrap split">
+        <div>
+          <h2 id="help-title">Answers on your own pages too</h2>
+          <p class="intro">The same line of code can show a help block anywhere on your website: a search box, your most frequent questions, and topics. It uses answers that have already proved themselves in your contact form.</p>
+          <ul class="points">
+            <li><strong>In your look.</strong> It uses your fonts and colors. Nothing is hosted elsewhere, and your visitors stay on your website.</li>
+            <li><strong>Where you want it.</strong> Paste one tag in any page, or turn on a small Help button. No code to write.</li>
+            <li><strong>Same rules as the form.</strong> Only answers backed by your official documents. When there is no clear answer, the visitor is sent to your contact form.</li>
+          </ul>
+          <p class="small-note">Developers and web agencies can also use the same features through an API.</p>
+        </div>
+        <figure class="helpblock">
+          <div class="hb" aria-hidden="true">
+            <p class="hb-title">Help</p>
+            <div class="hb-search"><span class="hb-icon"></span>Search our help</div>
+            <div class="hb-topics"><span>Returns</span><span>Delivery</span><span>Payment</span></div>
+            <p class="hb-label">Frequent questions</p>
+            <div class="hb-q is-open">
+              <p class="hb-question">Can I return an item I bought in the sale?</p>
+              <p class="hb-answer">Yes, within 14 days of delivery, unused and with its original label.</p>
+              <p class="hb-source">Terms of sale, section 4.2</p>
+            </div>
+            <div class="hb-q"><p class="hb-question">How long does delivery take?</p></div>
+            <div class="hb-q"><p class="hb-question">Can I change my order after paying?</p></div>
+          </div>
+          <p class="sr-only">Example: a help block on the website of a fictional shop, Maison Orée. It has a search box, three topics (returns, delivery, payment) and three frequent questions. The first one, about returning a sale item, is open and shows its answer with its source, section 4.2 of the terms of sale.</p>
+          <figcaption>Example with the same fictional shop, in its own colors.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="needs-title">
       <div class="wrap">
         <h2 id="needs-title">What you need</h2>
         <ul class="needs">
@@ -177,17 +237,127 @@
           </li>
           <li>
             <h3>One line of code</h3>
-            <p>Added to your contact page. That is the whole installation.</p>
+            <p>Added once to the footer of your website. That is the whole installation.</p>
           </li>
         </ul>
         <p class="needs-note">You do not need a helpdesk, a knowledge base or your past customer conversations.</p>
       </div>
     </section>
 
+    <section class="section section--white" id="pricing" aria-labelledby="pricing-title">
+      <div class="wrap">
+        <div class="split">
+          <div>
+            <h2 id="pricing-title">You only pay for the messages Verasko saves you</h2>
+            <p class="intro">No subscription and no plan to choose. You pay only when Verasko answers a visitor's question and the visitor no longer needs to send your contact form.</p>
+          </div>
+          <figure class="saved">
+            <div class="saved-card">
+              <h3>Messages saved this week</h3>
+              <ul>
+                <li>
+                  <p class="saved-q">Can I return an item I bought in the sale?</p>
+                  <p class="saved-meta">Answered from: Terms of sale, section 4.2 <span>Form not sent</span></p>
+                </li>
+                <li>
+                  <p class="saved-q">How long does delivery take?</p>
+                  <p class="saved-meta">Answered from: Terms of sale, section 6.1 <span>Form not sent</span></p>
+                </li>
+                <li>
+                  <p class="saved-q">Can I pay in three instalments?</p>
+                  <p class="saved-meta">Answered from: Payment policy, section 2 <span>Form not sent</span></p>
+                </li>
+              </ul>
+            </div>
+            <figcaption>Example from a weekly report, with the same fictional shop.</figcaption>
+          </figure>
+        </div>
+
+        <ul class="price-points">
+          <li>
+            <h3>What counts as a message saved</h3>
+            <p>Verasko showed a clear answer with its source, and the visitor did not send your form.</p>
+          </li>
+          <li>
+            <h3>You can check every one</h3>
+            <p>Your weekly report lists each message saved, with the question and the answer.</p>
+          </li>
+          <li>
+            <h3>You set a monthly limit</h3>
+            <p>Above it, Verasko stops answering and your form works as before. No surprise bill.</p>
+          </li>
+        </ul>
+
+        <div class="plans-more">
+          <div>
+            <h3>Included at no extra cost</h3>
+            <ul class="report-list">
+              <li>a suggested reply in the notification email you already receive;</li>
+              <li>a weekly report with missing answers and contradictions;</li>
+              <li>a help block on your own website;</li>
+              <li>English and French.</li>
+            </ul>
+          </div>
+          <p class="plan-note">The price per message saved will be published at launch, excluding VAT. Verasko is for businesses only.</p>
+        </div>
+
+        <aside class="pilot" aria-labelledby="pilot-title">
+          <div>
+            <h3 id="pilot-title">Pilot program</h3>
+            <p>The first 10 companies use Verasko for free until launch. After launch, they get 50% off the price per message for 12 months. In return, we ask for your feedback and the right to name you as a client.</p>
+          </div>
+          <a class="btn" href="#access">Join the pilot program</a>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="wrap split">
+        <div>
+          <h2 id="faq-title">Questions before you start</h2>
+          <p class="intro">Something else on your mind? Write to <a href="mailto:hello@verasko.com">hello@verasko.com</a>.</p>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>Does Verasko replace my contact form?</summary>
+            <p>No. Your form stays where it is and keeps working. Verasko only adds an answer before the message is sent, when it can back it up. Visitors can always send their message.</p>
+          </details>
+          <details>
+            <summary>What happens when Verasko is not sure?</summary>
+            <p>It does not answer. The message reaches you as usual, and the missing information appears in your weekly report, so you can add it to your documents.</p>
+          </details>
+          <details>
+            <summary>What do I pay if a visitor sends the form anyway?</summary>
+            <p>Nothing. The message reached you, so it is not counted. You pay only when the answer was enough and the visitor did not need to write to you.</p>
+          </details>
+          <details>
+            <summary>Why is there no price yet?</summary>
+            <p>The price per message saved will be published at launch. Until then, the companies in the pilot program use Verasko for free. After launch, they get 50% off that price for 12 months.</p>
+          </details>
+          <details>
+            <summary>How does Verasko avoid wrong answers?</summary>
+            <p>It answers only from the documents you mark as official. Each fact is checked a second time by a separate AI model, and prices, dates, deadlines and conditions must match your documents. If a check fails, the visitor sees no answer.</p>
+          </details>
+          <details>
+            <summary>Will it work with my website?</summary>
+            <p>Verasko is added with one line of code in the footer of your website. During the pilot program, we check with you that it works with your contact form before it goes live.</p>
+          </details>
+          <details>
+            <summary>What happens to my visitors' messages?</summary>
+            <p>The messages typed in your form are personal data. Verasko processes them on your behalf, only to answer and to prepare your report, and stores them in the European Union.</p>
+          </details>
+          <details>
+            <summary>Who is behind Verasko?</summary>
+            <p>Verasko is a brand of C.Verbois Consulting Comm. V., a company based in Belgium. Company details are in our <a href="/terms/">terms of use</a>.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
     <section class="access" id="access" aria-labelledby="access-title">
       <div class="wrap">
-        <h2 id="access-title">Try Verasko on your own contact form</h2>
-        <p>We are opening Verasko to a small group of companies first. Tell us about your website and we will get back to you.</p>
+        <h2 id="access-title">Join the pilot program</h2>
+        <p>We are opening Verasko to 10 companies first. Tell us about your website.</p>
         <form class="contact" name="early-access" method="POST" action="/thanks/" data-netlify="true" netlify-honeypot="bot-field">
           <input type="hidden" name="form-name" value="early-access">
           <input type="hidden" name="language" value="en">
@@ -203,12 +373,60 @@
             </p>
           </div>
           <p class="contact-field">
-            <label for="cf-site">Company website <span class="opt">(optional)</span></label>
-            <input id="cf-site" name="website" type="text" autocomplete="url" inputmode="url" maxlength="200">
+            <label for="cf-site">Company website</label>
+            <input id="cf-site" name="website" type="text" autocomplete="url" inputmode="url" required maxlength="200">
           </p>
+
+          <fieldset class="choice" id="cf-volume" data-required>
+            <legend>Contact messages per month</legend>
+            <div class="choice-list">
+              <label><input type="radio" name="volume" value="under-100" required> Less than 100</label>
+              <label><input type="radio" name="volume" value="100-500"> 100 to 500</label>
+              <label><input type="radio" name="volume" value="500-1500"> 500 to 1,500</label>
+              <label><input type="radio" name="volume" value="over-1500"> More than 1,500</label>
+            </div>
+          </fieldset>
+
+          <fieldset class="choice" id="cf-platform" data-required>
+            <legend>Your website is built with</legend>
+            <div class="choice-list">
+              <label><input type="radio" name="platform" value="wordpress" required> WordPress</label>
+              <label><input type="radio" name="platform" value="shopify"> Shopify</label>
+              <label><input type="radio" name="platform" value="wix"> Wix</label>
+              <label><input type="radio" name="platform" value="squarespace"> Squarespace</label>
+              <label><input type="radio" name="platform" value="other"> Other</label>
+            </div>
+          </fieldset>
+
+          <fieldset class="choice" id="cf-inbox">
+            <legend>Where do your form messages arrive today? <span class="opt">(optional)</span></legend>
+            <div class="choice-list">
+              <label><input type="radio" name="inbox" value="mailbox"> A shared mailbox</label>
+              <label><input type="radio" name="inbox" value="helpdesk"> A helpdesk tool</label>
+              <label><input type="radio" name="inbox" value="other"> Other</label>
+            </div>
+          </fieldset>
+
+          <fieldset class="choice" id="cf-documents">
+            <legend>Do you have official documents, such as terms of sale, a price list or policies? <span class="opt">(optional)</span></legend>
+            <div class="choice-list">
+              <label><input type="radio" name="documents" value="yes"> Yes</label>
+              <label><input type="radio" name="documents" value="no"> No</label>
+            </div>
+          </fieldset>
+
+          <fieldset class="choice" id="cf-languages">
+            <legend>Languages of your website <span class="opt">(optional)</span></legend>
+            <div class="choice-list">
+              <label><input type="radio" name="languages" value="en"> English</label>
+              <label><input type="radio" name="languages" value="fr"> French</label>
+              <label><input type="radio" name="languages" value="both"> Both</label>
+            </div>
+          </fieldset>
+
           <p class="contact-field">
-            <label for="cf-message">Tell us about your website and your contact form</label>
-            <textarea id="cf-message" name="message" rows="5" required maxlength="5000"></textarea>
+            <label for="cf-message">Anything else you want to tell us <span class="opt">(optional)</span></label>
+            <textarea id="cf-message" name="message" rows="4" maxlength="5000"></textarea>
           </p>
           <div class="contact-send">
             <button class="btn" type="submit">Send</button>
@@ -222,6 +440,7 @@
   <footer class="site-foot">
     <div class="wrap">
       <span>© 2026 Verasko</span>
+      <a href="#pricing">Pricing</a>
       <a href="/privacy/">Privacy</a>
       <a href="/terms/">Terms</a>
       <a href="/fr/" hreflang="fr" lang="fr">Français</a>
