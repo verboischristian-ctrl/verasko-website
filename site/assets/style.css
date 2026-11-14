@@ -749,40 +749,27 @@ h3 {
 
 /* Pricing */
 
-.plans {
+.price-points {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.25rem;
-  margin-top: 2.5rem;
+  margin: 2.5rem 0 0;
+  padding: 0;
+  list-style: none;
 }
-.plan {
+.price-points li {
   border: 1px solid var(--rule);
   border-top: 3px solid var(--ink);
   border-radius: 8px;
   padding: 1.4rem 1.4rem 1.5rem;
   background: var(--paper);
 }
-.plan-price {
-  margin: 0.9rem 0 0;
+.price-points h3 {
+  font-size: 1.0625rem;
+}
+.price-points p {
+  margin: 0.5rem 0 0;
   color: var(--ink-2);
-}
-.plan-price .amount {
-  font-size: 2.25rem;
-  font-weight: 720;
-  letter-spacing: -0.03em;
-  color: var(--ink);
-  line-height: 1.1;
-}
-.plan-year {
-  margin: 0.3rem 0 0;
-  font-size: 0.9375rem;
-  color: var(--slate);
-}
-.plan-volume {
-  margin: 1.1rem 0 0;
-  padding-top: 1rem;
-  border-top: 1px solid var(--rule);
-  font-weight: 560;
 }
 .plans-more {
   display: grid;
@@ -796,15 +783,11 @@ h3 {
 .plans-more .report-list {
   margin-top: 1rem;
 }
-.plan-notes {
+.plan-note {
   margin: 0;
-  padding: 0;
-  list-style: none;
+  align-self: end;
   font-size: 0.875rem;
   color: var(--slate);
-}
-.plan-notes li {
-  margin-bottom: 0.6rem;
 }
 .pilot {
   display: flex;
@@ -1092,7 +1075,7 @@ h3 {
     grid-template-columns: minmax(0, 1fr);
   }
   .needs,
-  .plans,
+  .price-points,
   .plans-more {
     grid-template-columns: minmax(0, 1fr);
   }

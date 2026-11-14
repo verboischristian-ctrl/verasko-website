@@ -16,7 +16,7 @@ Ne pas pousser directement sur `main` pour de petites corrections : chaque mise 
 
 ## Contenu
 
-- [Brief de la première version du site](docs/brief-premiere-version.md) (version du 08/11/2026) : appliqué sur le site, dans les deux langues.
+- [Brief de la première version du site](docs/brief-premiere-version.md) (version du 14/11/2026) : appliquée sur le site, dans les deux langues.
 
 ## Règles
 
