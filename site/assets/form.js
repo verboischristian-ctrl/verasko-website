@@ -11,6 +11,7 @@
         email: "Saisissez une adresse e-mail valide, par exemple nom@entreprise.com.",
         website: "Saisissez l'adresse de votre site, par exemple entreprise.com.",
         tooLong: "Ce texte est trop long.",
+        choose: "Choisissez une réponse.",
         sending: "Envoi…"
       }
     : {
@@ -18,6 +19,7 @@
         email: "Enter a valid email address, for example name@company.com.",
         website: "Enter your website address, for example company.com.",
         tooLong: "This text is too long.",
+        choose: "Please choose an answer.",
         sending: "Sending…"
       };
 
@@ -28,9 +30,18 @@
     return el.type !== "hidden" && el.type !== "radio" && el.type !== "checkbox" && !el.closest(".hp");
   });
 
+  // Groups of radio buttons where an answer is required.
+  var groups = Array.prototype.slice.call(form.querySelectorAll("fieldset[data-required]"));
+  var items = fields.concat(groups);
+
   form.setAttribute("novalidate", "");
 
+  function isGroup(el) {
+    return el.tagName === "FIELDSET";
+  }
+
   function problem(el) {
+    if (isGroup(el)) return el.querySelector("input:checked") ? "" : text.choose;
     var v = el.value.trim();
     if (!v) return el.required ? text.required : "";
     if (el.maxLength > 0 && v.length > el.maxLength) return text.tooLong;
@@ -53,7 +64,8 @@
       box = document.createElement("span");
       box.id = id;
       box.className = "field-error";
-      el.insertAdjacentElement("afterend", box);
+      if (isGroup(el)) el.appendChild(box);
+      else el.insertAdjacentElement("afterend", box);
       var ids = (el.getAttribute("aria-describedby") || "").split(" ").filter(Boolean);
       if (ids.indexOf(id) < 0) ids.push(id);
       el.setAttribute("aria-describedby", ids.join(" "));
@@ -62,10 +74,10 @@
     el.setAttribute("aria-invalid", "true");
   }
 
-  fields.forEach(function (el) {
+  items.forEach(function (el) {
     // Fields are checked on submit, then again as the visitor fixes them.
     // No check on leaving a field: a message appearing there would move the Send button under the pointer.
-    el.addEventListener("input", function () {
+    el.addEventListener(isGroup(el) ? "change" : "input", function () {
       if (el.getAttribute("aria-invalid")) show(el, problem(el));
     });
   });
@@ -75,14 +87,20 @@
 
   form.addEventListener("submit", function (e) {
     var first = null;
-    fields.forEach(function (el) {
-      var msg = problem(el);
-      show(el, msg);
-      if (msg && !first) first = el;
-    });
+    // Check in the order of the page, so the first problem gets the focus.
+    items
+      .slice()
+      .sort(function (a, b) {
+        return a.compareDocumentPosition(b) & Node.DOCUMENT_POSITION_FOLLOWING ? -1 : 1;
+      })
+      .forEach(function (el) {
+        var msg = problem(el);
+        show(el, msg);
+        if (msg && !first) first = el;
+      });
     if (first) {
       e.preventDefault();
-      first.focus();
+      (isGroup(first) ? first.querySelector("input") : first).focus();
       return;
     }
     fields.forEach(function (el) {
