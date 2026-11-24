@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Verasko : des réponses tirées de vos documents officiels</title>
-  <meta name="description" content="Verasko se place devant votre formulaire de contact et répond uniquement à partir de vos documents officiels. S'il n'est pas sûr, votre formulaire part comme d'habitude.">
+  <meta name="description" content="Verasko se place devant votre formulaire de contact et répond uniquement à partir de vos documents officiels. S'il n'est pas sûr, votre formulaire part comme d'habitude. Vous ne payez que les messages qu'il vous évite.">
   <link rel="canonical" href="https://verasko.com/fr/">
   <link rel="alternate" hreflang="en" href="https://verasko.com/">
   <link rel="alternate" hreflang="fr" href="https://verasko.com/fr/">
@@ -29,13 +29,40 @@
   <link rel="stylesheet" href="/assets/style.css">
   <script src="/assets/demo.js" defer></script>
   <script src="/assets/form.js" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Verasko",
+    "url": "https://verasko.com/fr/",
+    "logo": "https://verasko.com/apple-touch-icon.png",
+    "email": "hello@verasko.com",
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "C.Verbois Consulting Comm. V.",
+      "vatID": "BE0808727897",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Meersstraat 194",
+        "postalCode": "1770",
+        "addressLocality": "Liedekerke",
+        "addressCountry": "BE"
+      }
+    }
+  }
+  </script>
 </head>
 <body>
   <a class="skip" href="#main">Aller au contenu</a>
 
   <header class="wrap site-head">
     <a class="wordmark" href="/fr/" aria-label="Verasko, accueil">ver<span class="ask">ask</span>o</a>
-    <a class="lang" href="/" hreflang="en" lang="en">English</a>
+    <nav class="site-nav" aria-label="Menu principal">
+      <a class="nav-how" href="#sources">Fonctionnement</a>
+      <a href="#tarifs">Tarifs</a>
+      <a class="lang" href="/" hreflang="en" lang="en">English</a>
+      <a class="btn btn--small nav-cta" href="#access">Rejoindre le programme pilote</a>
+    </nav>
   </header>
 
   <main id="main">
@@ -44,8 +71,9 @@
         <h1 id="hero-title">Des réponses vraies aux questions de vos clients.</h1>
         <p class="lede">Verasko se place devant votre formulaire de contact. Il répond uniquement à partir de vos documents officiels et montre d'où vient chaque réponse. S'il n'est pas sûr, votre formulaire part comme d'habitude.</p>
         <div class="actions">
-          <a class="btn" href="#access">Demander un accès anticipé</a>
+          <a class="btn" href="#access">Rejoindre le programme pilote</a>
         </div>
+        <p class="hero-note">Gratuit jusqu'au lancement pour les 10 premières entreprises. Ensuite, vous ne payez que les messages que Verasko vous évite.</p>
       </div>
 
       <figure class="demo" data-demo aria-labelledby="demo-caption">
@@ -58,7 +86,7 @@
             </div>
             <div class="demo-field">
               <span class="demo-label">Votre message</span>
-              <span class="demo-input demo-input--area"><span data-typed>Puis-je retourner un article acheté en soldes ?</span><span class="caret"></span></span>
+              <span class="demo-input demo-input--area"><span data-typed>Puis-je retourner un article acheté en soldes&nbsp;?</span><span class="caret"></span></span>
             </div>
             <span class="demo-send">Envoyer</span>
           </div>
@@ -78,7 +106,7 @@
             </div>
           </div>
         </div>
-        <p class="sr-only">Exemple : un visiteur demande à une boutique fictive s'il peut retourner un article soldé. Avant l'envoi du formulaire, Verasko répond que les articles soldés peuvent être retournés dans les 14 jours suivant la livraison s'ils sont non utilisés et avec leur étiquette d'origine, et montre le passage correspondant de l'article 4.2 des conditions générales de vente. Le visiteur peut toujours envoyer son message.</p>
+        <p class="sr-only">Exemple&nbsp;: un visiteur demande à une boutique fictive s'il peut retourner un article soldé. Avant l'envoi du formulaire, Verasko répond que les articles soldés peuvent être retournés dans les 14 jours suivant la livraison s'ils sont non utilisés et avec leur étiquette d'origine, et montre le passage correspondant de l'article 4.2 des conditions générales de vente. Le visiteur peut toujours envoyer son message.</p>
         <figcaption id="demo-caption">
           <span>Exemple avec une boutique fictive.</span>
           <button class="replay" type="button" data-replay hidden>Rejouer</button>
@@ -90,7 +118,7 @@
       <div class="wrap split">
         <div>
           <h2 id="sources-title">Il vérifie d'abord vos documents officiels</h2>
-          <p class="intro">La plupart des assistants IA traitent toutes les pages de la même façon. Verasko classe vos sources : une ancienne page FAQ ne l'emporte jamais sur vos conditions.</p>
+          <p class="intro">La plupart des assistants IA traitent toutes les pages de la même façon. Verasko classe vos sources&nbsp;: une ancienne page FAQ ne l'emporte jamais sur vos conditions.</p>
         </div>
         <ol class="ladder">
           <li class="is-first">
@@ -137,12 +165,12 @@
       <div class="wrap split">
         <div>
           <h2 id="report-title">Chaque semaine, un court rapport</h2>
-          <p class="intro">Pas de tableau de bord à consulter. Chaque semaine, vous recevez un e-mail avec :</p>
+          <p class="intro">Pas de tableau de bord à consulter. Chaque semaine, vous recevez un e-mail avec&nbsp;:</p>
           <ul class="report-list">
-            <li>les questions auxquelles Verasko a répondu, et la réaction des visiteurs ;</li>
-            <li>les questions auxquelles vos documents ne répondent pas encore ;</li>
-            <li>les pages de votre site qui contredisent vos documents officiels ;</li>
-            <li>de nouvelles entrées de FAQ, construites à partir des réponses qui ont fonctionné.</li>
+            <li>les questions auxquelles Verasko a répondu, et la réaction des visiteurs&nbsp;;</li>
+            <li>les questions auxquelles vos documents ne répondent pas encore&nbsp;;</li>
+            <li>les pages de votre site qui contredisent vos documents officiels&nbsp;;</li>
+            <li>les nouvelles réponses ajoutées au bloc d'aide de votre site.</li>
           </ul>
         </div>
         <figure class="report">
@@ -163,7 +191,39 @@
       </div>
     </section>
 
-    <section class="section section--white" aria-labelledby="needs-title">
+    <section class="section section--white" id="bloc-aide" aria-labelledby="help-title">
+      <div class="wrap split">
+        <div>
+          <h2 id="help-title">Des réponses aussi sur vos propres pages</h2>
+          <p class="intro">La même ligne de code peut afficher un bloc d'aide n'importe où sur votre site&nbsp;: une recherche, vos questions les plus fréquentes et des thèmes. Il utilise des réponses qui ont déjà fait leurs preuves dans votre formulaire de contact.</p>
+          <ul class="points">
+            <li><strong>À vos couleurs.</strong> Il reprend vos polices et vos couleurs. Rien n'est hébergé ailleurs, et vos visiteurs restent sur votre site.</li>
+            <li><strong>Là où vous le voulez.</strong> Collez une balise dans n'importe quelle page, ou activez un petit bouton «&nbsp;Aide&nbsp;». Aucun code à écrire.</li>
+            <li><strong>Les mêmes règles que le formulaire.</strong> Uniquement des réponses appuyées par vos documents officiels. Sans réponse claire, le visiteur est dirigé vers votre formulaire de contact.</li>
+          </ul>
+          <p class="small-note">Les développeurs et les agences web peuvent aussi utiliser les mêmes fonctions par une API.</p>
+        </div>
+        <figure class="helpblock">
+          <div class="hb" aria-hidden="true">
+            <p class="hb-title">Aide</p>
+            <div class="hb-search"><span class="hb-icon"></span>Rechercher dans l'aide</div>
+            <div class="hb-topics"><span>Retours</span><span>Livraison</span><span>Paiement</span></div>
+            <p class="hb-label">Questions fréquentes</p>
+            <div class="hb-q is-open">
+              <p class="hb-question">Puis-je retourner un article acheté en soldes&nbsp;?</p>
+              <p class="hb-answer">Oui, sous 14 jours après la livraison, non utilisé et avec son étiquette d'origine.</p>
+              <p class="hb-source">Conditions générales de vente, article 4.2</p>
+            </div>
+            <div class="hb-q"><p class="hb-question">Quel est le délai de livraison&nbsp;?</p></div>
+            <div class="hb-q"><p class="hb-question">Puis-je modifier ma commande après le paiement&nbsp;?</p></div>
+          </div>
+          <p class="sr-only">Exemple&nbsp;: un bloc d'aide sur le site d'une boutique fictive, Maison Orée. Il contient une recherche, trois thèmes (retours, livraison, paiement) et trois questions fréquentes. La première, sur le retour d'un article soldé, est ouverte et montre sa réponse avec sa source, l'article 4.2 des conditions générales de vente.</p>
+          <figcaption>Exemple avec la même boutique fictive, à ses couleurs.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="needs-title">
       <div class="wrap">
         <h2 id="needs-title">Ce dont vous avez besoin</h2>
         <ul class="needs">
@@ -177,17 +237,127 @@
           </li>
           <li>
             <h3>Une ligne de code</h3>
-            <p>Ajoutée à votre page de contact. C'est toute l'installation.</p>
+            <p>Ajoutée une fois dans le pied de page de votre site. C'est toute l'installation.</p>
           </li>
         </ul>
         <p class="needs-note">Vous n'avez besoin ni d'un logiciel de support, ni d'une base de connaissances, ni de l'historique de vos conversations clients.</p>
       </div>
     </section>
 
+    <section class="section section--white" id="tarifs" aria-labelledby="pricing-title">
+      <div class="wrap">
+        <div class="split">
+          <div>
+            <h2 id="pricing-title">Vous ne payez que les messages que Verasko vous évite</h2>
+            <p class="intro">Pas d'abonnement, pas de formule à choisir. Vous payez seulement quand Verasko répond à la question d'un visiteur et que celui-ci n'a plus besoin d'envoyer votre formulaire de contact.</p>
+          </div>
+          <figure class="saved">
+            <div class="saved-card">
+              <h3>Messages évités cette semaine</h3>
+              <ul>
+                <li>
+                  <p class="saved-q">Puis-je retourner un article acheté en soldes&nbsp;?</p>
+                  <p class="saved-meta">Réponse tirée de&nbsp;: Conditions générales de vente, article 4.2 <span>Formulaire non envoyé</span></p>
+                </li>
+                <li>
+                  <p class="saved-q">Quel est le délai de livraison&nbsp;?</p>
+                  <p class="saved-meta">Réponse tirée de&nbsp;: Conditions générales de vente, article 6.1 <span>Formulaire non envoyé</span></p>
+                </li>
+                <li>
+                  <p class="saved-q">Puis-je payer en trois fois&nbsp;?</p>
+                  <p class="saved-meta">Réponse tirée de&nbsp;: Politique de paiement, article 2 <span>Formulaire non envoyé</span></p>
+                </li>
+              </ul>
+            </div>
+            <figcaption>Exemple tiré d'un rapport hebdomadaire, avec la même boutique fictive.</figcaption>
+          </figure>
+        </div>
+
+        <ul class="price-points">
+          <li>
+            <h3>Ce qui compte comme un message évité</h3>
+            <p>Verasko a montré une réponse claire, avec sa source, et le visiteur n'a pas envoyé votre formulaire.</p>
+          </li>
+          <li>
+            <h3>Vous pouvez tout vérifier</h3>
+            <p>Votre rapport hebdomadaire liste chaque message évité, avec la question et la réponse.</p>
+          </li>
+          <li>
+            <h3>Vous fixez une limite mensuelle</h3>
+            <p>Au-delà, Verasko arrête de répondre et votre formulaire fonctionne comme avant. Pas de facture surprise.</p>
+          </li>
+        </ul>
+
+        <div class="plans-more">
+          <div>
+            <h3>Compris sans frais</h3>
+            <ul class="report-list">
+              <li>une réponse suggérée dans l'e-mail de notification que vous recevez déjà&nbsp;;</li>
+              <li>un rapport hebdomadaire avec les réponses manquantes et les contradictions&nbsp;;</li>
+              <li>un bloc d'aide sur votre propre site&nbsp;;</li>
+              <li>l'anglais et le français.</li>
+            </ul>
+          </div>
+          <p class="plan-note">Le prix par message évité sera publié au lancement, hors TVA. Verasko est réservé aux entreprises.</p>
+        </div>
+
+        <aside class="pilot" aria-labelledby="pilot-title">
+          <div>
+            <h3 id="pilot-title">Programme pilote</h3>
+            <p>Les 10 premières entreprises utilisent Verasko gratuitement jusqu'au lancement. Après le lancement, elles ont 50&nbsp;% de réduction sur le prix par message pendant 12 mois. En échange, nous vous demandons vos retours et le droit de vous citer comme client.</p>
+          </div>
+          <a class="btn" href="#access">Rejoindre le programme pilote</a>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="wrap split">
+        <div>
+          <h2 id="faq-title">Vos questions avant de commencer</h2>
+          <p class="intro">Une autre question&nbsp;? Écrivez à <a href="mailto:hello@verasko.com">hello@verasko.com</a>.</p>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>Verasko remplace-t-il mon formulaire de contact&nbsp;?</summary>
+            <p>Non. Votre formulaire reste en place et continue de fonctionner. Verasko ajoute seulement une réponse avant l'envoi du message, quand il peut la justifier. Le visiteur peut toujours envoyer son message.</p>
+          </details>
+          <details>
+            <summary>Que se passe-t-il quand Verasko n'est pas sûr&nbsp;?</summary>
+            <p>Il ne répond pas. Le message vous arrive comme d'habitude, et l'information manquante apparaît dans votre rapport hebdomadaire, pour que vous puissiez l'ajouter à vos documents.</p>
+          </details>
+          <details>
+            <summary>Que dois-je payer si le visiteur envoie quand même le formulaire&nbsp;?</summary>
+            <p>Rien. Le message vous est parvenu, il n'est donc pas compté. Vous payez seulement quand la réponse a suffi et que le visiteur n'a pas eu besoin de vous écrire.</p>
+          </details>
+          <details>
+            <summary>Pourquoi aucun prix n'est-il encore affiché&nbsp;?</summary>
+            <p>Le prix par message évité sera publié au lancement. D'ici là, les entreprises du programme pilote utilisent Verasko gratuitement. Après le lancement, elles ont 50&nbsp;% de réduction sur ce prix pendant 12 mois.</p>
+          </details>
+          <details>
+            <summary>Comment Verasko évite-t-il les mauvaises réponses&nbsp;?</summary>
+            <p>Il répond uniquement à partir des documents que vous indiquez comme officiels. Chaque fait est vérifié une seconde fois par un modèle d'IA distinct, et les prix, dates, délais et conditions doivent correspondre à vos documents. Si une vérification échoue, le visiteur ne voit aucune réponse.</p>
+          </details>
+          <details>
+            <summary>Est-ce que cela fonctionne avec mon site&nbsp;?</summary>
+            <p>Verasko s'ajoute avec une ligne de code dans le pied de page de votre site. Pendant le programme pilote, nous vérifions avec vous qu'il fonctionne avec votre formulaire de contact avant la mise en ligne.</p>
+          </details>
+          <details>
+            <summary>Que deviennent les messages de mes visiteurs&nbsp;?</summary>
+            <p>Les messages écrits dans votre formulaire sont des données personnelles. Verasko les traite pour votre compte, uniquement pour répondre et préparer votre rapport, et les conserve dans l'Union européenne.</p>
+          </details>
+          <details>
+            <summary>Qui est derrière Verasko&nbsp;?</summary>
+            <p>Verasko est une marque de C.Verbois Consulting Comm. V., une société établie en Belgique. Les informations sur la société se trouvent dans nos <a href="/fr/conditions/">conditions d'utilisation</a>.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
     <section class="access" id="access" aria-labelledby="access-title">
       <div class="wrap">
-        <h2 id="access-title">Essayez Verasko sur votre propre formulaire</h2>
-        <p>Nous ouvrons d'abord Verasko à un petit groupe d'entreprises. Parlez-nous de votre site et nous reviendrons vers vous.</p>
+        <h2 id="access-title">Rejoindre le programme pilote</h2>
+        <p>Nous ouvrons d'abord Verasko à 10 entreprises. Parlez-nous de votre site.</p>
         <form class="contact" name="early-access-fr" method="POST" action="/fr/merci/" data-netlify="true" netlify-honeypot="bot-field">
           <input type="hidden" name="form-name" value="early-access-fr">
           <input type="hidden" name="language" value="fr">
@@ -203,12 +373,60 @@
             </p>
           </div>
           <p class="contact-field">
-            <label for="cf-site">Site web de l'entreprise <span class="opt">(facultatif)</span></label>
-            <input id="cf-site" name="website" type="text" autocomplete="url" inputmode="url" maxlength="200">
+            <label for="cf-site">Site web de l'entreprise</label>
+            <input id="cf-site" name="website" type="text" autocomplete="url" inputmode="url" required maxlength="200">
           </p>
+
+          <fieldset class="choice" id="cf-volume" data-required>
+            <legend>Messages de contact par mois</legend>
+            <div class="choice-list">
+              <label><input type="radio" name="volume" value="under-100" required> Moins de 100</label>
+              <label><input type="radio" name="volume" value="100-500"> 100 à 500</label>
+              <label><input type="radio" name="volume" value="500-1500"> 500 à 1&nbsp;500</label>
+              <label><input type="radio" name="volume" value="over-1500"> Plus de 1&nbsp;500</label>
+            </div>
+          </fieldset>
+
+          <fieldset class="choice" id="cf-platform" data-required>
+            <legend>Votre site est fait avec</legend>
+            <div class="choice-list">
+              <label><input type="radio" name="platform" value="wordpress" required> WordPress</label>
+              <label><input type="radio" name="platform" value="shopify"> Shopify</label>
+              <label><input type="radio" name="platform" value="wix"> Wix</label>
+              <label><input type="radio" name="platform" value="squarespace"> Squarespace</label>
+              <label><input type="radio" name="platform" value="other"> Autre</label>
+            </div>
+          </fieldset>
+
+          <fieldset class="choice" id="cf-inbox">
+            <legend>Où arrivent aujourd'hui les messages de votre formulaire&nbsp;? <span class="opt">(facultatif)</span></legend>
+            <div class="choice-list">
+              <label><input type="radio" name="inbox" value="mailbox"> Une boîte e-mail partagée</label>
+              <label><input type="radio" name="inbox" value="helpdesk"> Un outil de helpdesk</label>
+              <label><input type="radio" name="inbox" value="other"> Autre</label>
+            </div>
+          </fieldset>
+
+          <fieldset class="choice" id="cf-documents">
+            <legend>Avez-vous des documents officiels, comme des conditions de vente, une liste de prix ou des politiques&nbsp;? <span class="opt">(facultatif)</span></legend>
+            <div class="choice-list">
+              <label><input type="radio" name="documents" value="yes"> Oui</label>
+              <label><input type="radio" name="documents" value="no"> Non</label>
+            </div>
+          </fieldset>
+
+          <fieldset class="choice" id="cf-languages">
+            <legend>Langues de votre site <span class="opt">(facultatif)</span></legend>
+            <div class="choice-list">
+              <label><input type="radio" name="languages" value="en"> Anglais</label>
+              <label><input type="radio" name="languages" value="fr"> Français</label>
+              <label><input type="radio" name="languages" value="both"> Les deux</label>
+            </div>
+          </fieldset>
+
           <p class="contact-field">
-            <label for="cf-message">Parlez-nous de votre site et de votre formulaire de contact</label>
-            <textarea id="cf-message" name="message" rows="5" required maxlength="5000"></textarea>
+            <label for="cf-message">Autre chose à nous dire <span class="opt">(facultatif)</span></label>
+            <textarea id="cf-message" name="message" rows="4" maxlength="5000"></textarea>
           </p>
           <div class="contact-send">
             <button class="btn" type="submit">Envoyer</button>
@@ -222,6 +440,7 @@
   <footer class="site-foot">
     <div class="wrap">
       <span>© 2026 Verasko</span>
+      <a href="#tarifs">Tarifs</a>
       <a href="/fr/confidentialite/">Confidentialité</a>
       <a href="/fr/conditions/">Conditions</a>
       <a href="/" hreflang="en" lang="en">English</a>
